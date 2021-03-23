@@ -146,17 +146,17 @@ for dog_breed in dog_breeds_available_for_adoption:
     break
 
 
- #-----> GENERAL STUCTURE FOR LOOP CONTROL: BREAK
+ #-----> GENERAL STUCTURE FOR LOOP CONTROL: CONTINUE
     
     # Used to skip the current iteration/index in the loop. The following skips iterations less than 1 and outputs positive numbers.
 
     #Continue is usually paired with a conditional (if/else/elif)
 
     # big_number_list = [1, 2, -1, 4, -5, 5, 2, -9]
-    # for i in big_number_list:
-    #   if i <= 0:
-    # continue
-    # print(i)
+    # for num in big_number_list:
+    #   if num <= 0:
+    #     continue
+    #   print(num)
 
 # If an entry is less than 21 skip it and move on to the next entry, otherwise print age.
 
