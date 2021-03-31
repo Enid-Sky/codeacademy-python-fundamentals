@@ -3,6 +3,16 @@
 letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 points = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 4, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10]
 
+# Add lowercase letters to the list of letters using list comprehension:
+
+letters += [
+  letter.lower()
+  for letter
+  in letters
+]
+points *= 2
+
+
 # TALLY THE SCORE OF EACH SCRABBLE WORD
 
 # create a dictionary using the lists letters and points.
