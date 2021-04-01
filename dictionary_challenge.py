@@ -4,9 +4,9 @@ def sum_values(my_dictionary):
   return sum(my_dictionary.values())
 
 # Test function calls:
-print(sum_values({"milk":5, "eggs":2, "flour": 3}))
+# print(sum_values({"milk":5, "eggs":2, "flour": 3}))
 # should print 10
-print(sum_values({10:1, 100:2, 1000:3}))
+# print(sum_values({10:1, 100:2, 1000:3}))
 # should print 6
 
 
@@ -21,9 +21,9 @@ def sum_even_keys(my_dictionary):
     return count
 
 # Test function calls:
-print(sum_even_keys({1:5, 2:2, 3:3}))
+# print(sum_even_keys({1:5, 2:2, 3:3}))
 # should print 2
-print(sum_even_keys({10:1, 100:2, 1000:3}))
+# print(sum_even_keys({10:1, 100:2, 1000:3}))
 # should print 6
 
 
@@ -37,9 +37,9 @@ def add_ten(my_dictionary):
 
   
 
-print(add_ten({1:5, 2:2, 3:3}))
+# print(add_ten({1:5, 2:2, 3:3}))
 # should print {1:15, 2:12, 3:13}
-print(add_ten({10:1, 100:2, 1000:3}))
+# print(add_ten({10:1, 100:2, 1000:3}))
 # should print {10:11, 100:12, 1000:13}
 
 
@@ -72,9 +72,9 @@ def values_that_are_keys(my_dictionary):
 #   return list_keys
 
 # Uncomment these function calls to test your  function:
-print(values_that_are_keys({1:100, 2:1, 3:4, 4:10}))
+# print(values_that_are_keys({1:100, 2:1, 3:4, 4:10}))
 # should print [1, 4]
-print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
+# print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
 # should print ["a"]
 
 
@@ -98,9 +98,9 @@ def max_key(my_dictionary):
 #   return largest_key
 
 # Uncomment these function calls to test your  function:
-print(max_key({1:100, 2:1, 3:4, 4:10}))
+# print(max_key({1:100, 2:1, 3:4, 4:10}))
 # should print 1
-print(max_key({"a":100, "b":10, "c":1000}))
+# print(max_key({"a":100, "b":10, "c":1000}))
 # should print "c"
 
 
@@ -127,9 +127,9 @@ def word_length_dictionary(words):
 
 
 # Uncomment these function calls to test your  function:
-print(word_length_dictionary(["apple", "dog", "cat"]))
+# print(word_length_dictionary(["apple", "dog", "cat"]))
 # should print {"apple":5, "dog": 3, "cat":3}
-print(word_length_dictionary(["a", ""]))
+# print(word_length_dictionary(["a", ""]))
 # should print {"a": 1, "": 0}
 
 
@@ -154,3 +154,28 @@ print(frequency_dictionary(["apple", "apple", "cat", 1]))
 # should print {"apple":2, "cat":1, 1:1}
 print(frequency_dictionary([0,0,0,0,0]))
 # should print {0:5}
+
+
+
+# Create a function named unique_values that takes a dictionary named my_dictionary as a parameter. The function should return the number of unique values in the dictionary.
+
+def unique_values(my_dictionary):
+    unique = []
+
+    for value in my_dictionary.values():
+        if value not in unique:
+            unique.append(value)
+    return len(unique)
+
+# OR simplify with set() because it does not allow duplicates. 
+# def unique_values(my_dictionary):
+#     return len(set(my_dictionary.values()))
+
+
+
+
+# Uncomment these function calls to test your  function:
+print(unique_values({0:3, 1:1, 4:1, 5:3}))
+# should print 2
+print(unique_values({0:3, 1:3, 4:3, 5:3}))
+# should print 1
