@@ -76,3 +76,51 @@ print(values_that_are_keys({1:100, 2:1, 3:4, 4:10}))
 # should print [1, 4]
 print(values_that_are_keys({"a":"apple", "b":"a", "c":100}))
 # should print ["a"]
+
+
+# The function should return the key associated with the largest value in the dictionary.
+
+
+
+def max_key(my_dictionary):
+  largest_value = float("-inf")
+  largest_key = float("-inf")
+
+  for key, value in my_dictionary.items():
+    if value > largest_value:
+      largest_value = value
+      largest_key = key
+  return largest_key
+  
+  #QUICKER WAY USING MAX and key assignment
+# def max_key(my_dictionary):
+#   largest_key = max(my_dictionary, key=my_dictionary.get)
+#   return largest_key
+
+# Uncomment these function calls to test your  function:
+print(max_key({1:100, 2:1, 3:4, 4:10}))
+# should print 1
+print(max_key({"a":100, "b":10, "c":1000}))
+# should print "c"
+
+
+
+# Takes a list of strings named words as a parameter. The function should return a dictionary of key/value pairs where every key is a word in words and every value is the length of that word. 
+
+
+def word_length_dictionary(words):
+
+  len_of_words = []
+
+  for word in words:
+    len_of_words.append(len(word))
+    
+  my_dictionary = dict(zip(words, len_of_words ))
+  return my_dictionary
+
+
+# Uncomment these function calls to test your  function:
+print(word_length_dictionary(["apple", "dog", "cat"]))
+# should print {"apple":5, "dog": 3, "cat":3}
+print(word_length_dictionary(["a", ""]))
+# should print {"a": 1, "": 0}
