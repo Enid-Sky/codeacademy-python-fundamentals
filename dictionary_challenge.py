@@ -150,9 +150,9 @@ def frequency_dictionary(words):
 
 
 # Uncomment these function calls to test your  function:
-print(frequency_dictionary(["apple", "apple", "cat", 1]))
+# print(frequency_dictionary(["apple", "apple", "cat", 1]))
 # should print {"apple":2, "cat":1, 1:1}
-print(frequency_dictionary([0,0,0,0,0]))
+# print(frequency_dictionary([0,0,0,0,0]))
 # should print {0:5}
 
 
@@ -175,7 +175,37 @@ def unique_values(my_dictionary):
 
 
 # Uncomment these function calls to test your  function:
-print(unique_values({0:3, 1:1, 4:1, 5:3}))
+# print(unique_values({0:3, 1:1, 4:1, 5:3}))
 # should print 2
-print(unique_values({0:3, 1:3, 4:3, 5:3}))
+# print(unique_values({0:3, 1:3, 4:3, 5:3}))
 # should print 1
+
+
+
+
+
+
+# Create a function named count_first_letter that takes a dictionary named names as a parameter. names should be a dictionary where the key is a last name and the value is a list of first names. The function should return a new dictionary where each key is the first letter of a last name, and the value is the number of people whose last name begins with that letter.
+
+# create an empty dictionary, letters.
+# loop over key in names
+# create a variable for key at 0, first_letter
+# if the first_letter is not in new dict, add the letter key and value is 0
+# else add key and add using += len of original name[key] for the value.
+# return new dict. 
+
+def count_first_letter(names):
+  letters = {}
+
+  for key in names:
+    first_letter = key[0]
+    if first_letter not in letters:
+      letters[first_letter] = 0
+    letters[first_letter] += len(names[key])
+  return letters
+
+# Uncomment these function calls to test your  function:
+print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Lannister": ["Jaime", "Cersei", "Tywin"]}))
+# should print {"S": 4, "L": 3}
+print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Sannister": ["Jaime", "Cersei", "Tywin"]}))
+# should print {"S": 7}
