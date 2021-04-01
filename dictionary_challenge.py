@@ -118,9 +118,39 @@ def word_length_dictionary(words):
   my_dictionary = dict(zip(words, len_of_words ))
   return my_dictionary
 
+  #OR SIMPLER CODE
+#   def word_length_dictionary(words):
+#       word_lengths = {}
+    #   for word in words:
+    #     word_lengths[word] = len(word)
+    #   return word_lengths
+
 
 # Uncomment these function calls to test your  function:
 print(word_length_dictionary(["apple", "dog", "cat"]))
 # should print {"apple":5, "dog": 3, "cat":3}
 print(word_length_dictionary(["a", ""]))
 # should print {"a": 1, "": 0}
+
+
+
+# Write a function named frequency_dictionary that takes a list of elements named words as a parameter. The function should return a dictionary containing the frequency of each element in words.
+
+def frequency_dictionary(words):
+    #create an empty dictionary
+    dict = {}
+    #loop over list of words
+    for word in words:
+    # if word not in dictionary, set the value to 0
+        if word not in dict:
+            dict[word] = 0
+            # otherwise add one to the value
+        dict[word] += 1
+    return dict
+
+
+# Uncomment these function calls to test your  function:
+print(frequency_dictionary(["apple", "apple", "cat", 1]))
+# should print {"apple":2, "cat":1, 1:1}
+print(frequency_dictionary([0,0,0,0,0]))
+# should print {0:5}
